@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit";
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes changeBackgroundColor {
+    from {
+        background-color: aqua;
+        border-radius: 0px;
+        /* transform: translateX(0px) scale(1); */
+        
+    }
+    to{
+        background-color: crimson;
+        border-radius: 75px;
+        /* transform: translateX(100px) scale(0.5); */
+    }
+}
+
+
+@property --bgColor{
+    syntax: "<color>";
+    initial-value: rgb(255, 255, 255);
+    inherits: false;
+}
+
+.box{
+    height: 300px;
+    width: 600px;
+    border: 2px solid white;
+    background-color: var(--bgColor);
+    animation: changeBackgroundColor 5s forwards;
+}

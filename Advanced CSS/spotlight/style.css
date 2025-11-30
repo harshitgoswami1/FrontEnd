@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit";
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg");
+    background-size: cover;        /* makes it cover the screen */
+    background-position: center;   /* centers the image */
+    background-repeat: no-repeat;
+}
+
+:root {
+    --x: 200px;
+    --y: 200px;
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(
+        150px
+        at var(--x) var(--y),
+        rgba(255, 255, 255, 0),
+        rgba(0, 0, 0, 0.952)
+    );
+}
